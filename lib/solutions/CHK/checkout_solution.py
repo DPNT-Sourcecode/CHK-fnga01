@@ -52,10 +52,15 @@ class CheckoutSolution:
         # 3U get one U for free
         if dict['U'] >= 4:
             dict['U'] -= dict['U']//4
-        
+        #any 3 items of [S,T,X,Y,Z] for 45
+        #favour customer: remove most expensive item among these, and calculate the cheaper ones
+        #most expensive: Z > S,T,Y > X
+        groupoffer = dict['S'] + dict['T'] + dict['X'] + dict['Y'] + dict['Z']
+        if groupoffer >= 3:
+            price +=
     
         price = 0
-        price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40 + dict['F'] * 10 + dict['G'] * 20 + dict['I'] * 35 + dict['J'] * 60 +  dict['L'] * 90 + dict['M'] * 15 + dict['N'] * 40 + dict['O'] * 10 + dict['R'] * 50 + dict['S'] * 20 + dict['T'] * 20 + dict['U'] * 40 + dict['W'] * 20 + dict['X'] * 90 + dict['Y'] * 10 + dict['Z'] * 50
+        price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40 + dict['F'] * 10 + dict['G'] * 20 + dict['I'] * 35 + dict['J'] * 60 +  dict['L'] * 90 + dict['M'] * 15 + dict['N'] * 40 + dict['O'] * 10 + dict['R'] * 50 + dict['S'] * 20 + dict['T'] * 20 + dict['U'] * 40 + dict['W'] * 20 + dict['X'] * 17 + dict['Y'] * 20 + dict['Z'] * 21
         
         
         
@@ -68,5 +73,6 @@ class CheckoutSolution:
         price += dict['V']//3 * 130 + dict['V'] % 3 //2 * 90 + (dict['V'] % 3) % 2 * 50
 
         return price
+
 
 
