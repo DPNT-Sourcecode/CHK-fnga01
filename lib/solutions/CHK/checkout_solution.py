@@ -13,6 +13,8 @@ class CheckoutSolution:
         for a in skus:
             if a in dict:
                 dict[a] += 1
+            else:
+                return -1
         price = 0
         price += dict['C'] * 20 + dict['D'] * 15
         price += dict['B']//2 * 45 + dict['B'] % 2 * 30
@@ -20,4 +22,3 @@ class CheckoutSolution:
 
         
         return price
-
