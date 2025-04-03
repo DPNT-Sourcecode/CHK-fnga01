@@ -43,6 +43,9 @@ class CheckoutSolution:
         #buy 2 F, get an F for free (need at least 3 in basket)
         if dict['F'] >= 3:
             dict['F'] -= dict['F']//3
+        # 3N get one M for free
+        if dict['M'] > 0:
+            dict['M'] -= dict['N']//3
         
     
         price = 0
@@ -52,9 +55,11 @@ class CheckoutSolution:
         
         
         price += dict['B']//2 * 45 + dict['B'] % 2 * 30
-        # A: offers for buying 5 and 3, 5 takes priority
         price += dict['A']//5 * 200 + dict['A'] % 5 //3 * 130 + (dict['A'] % 5) % 3 * 50
         price += dict['H']//10 * 80 + dict['H'] % 10 //5 * 45 + (dict['H'] % 10) % 5 * 10
-        price += dict['K']//2 * 
+        price += dict['K']//2 * 150 + dict['K'] % 2 * 80
+        price += dict['P']//5 * 200 + dict['P'] % 5 * 50
+        price += dict['Q']//3 * 80 + dict['Q'] % 3 * 30
+        price += dict['V']//3 * 130 + dict['V'] % 3 //2 * 90 + (dict['V'] % 3) % 2 * 50
 
         return price
