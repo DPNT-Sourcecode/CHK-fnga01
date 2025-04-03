@@ -3,7 +3,7 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus):
-        skus.sort()
+
         dict = {
             'A': 0,
             'B': 0,
@@ -20,3 +20,4 @@ class CheckoutSolution:
 
         
         return price
+
