@@ -97,9 +97,3 @@ class CheckoutSolution:
         price += dict['V']//3 * 130 + dict['V'] % 3 //2 * 90 + (dict['V'] % 3) % 2 * 50
 
         return price
-
-
-
-
-
-
