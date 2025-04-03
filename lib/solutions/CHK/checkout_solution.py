@@ -11,6 +11,26 @@ class CheckoutSolution:
             'D': 0,
             'E': 0,
             'F': 0,
+            'G': 0,     
+            'H': 0,
+            'I': 0,
+            'J': 0,
+            'K': 0,
+            'L': 0,
+            'M': 0,
+            'N': 0,
+            'O': 0,
+            'P': 0,
+            'Q': 0,
+            'R': 0,
+            'S': 0,
+            'T': 0,
+            'U': 0,
+            'V': 0,
+            'W': 0,
+            'X': 0,
+            'Y': 0,
+            'Z': 0,
         }
         for a in skus:
             if a in dict:
@@ -26,11 +46,12 @@ class CheckoutSolution:
         
     
         price = 0
-        price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40 + dict['F'] * 10
+        price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40 + dict['F'] * 10 + dict['G'] * 20 + dict['I'] * 35 + dict['J'] * 60 + dict['K'] * 70 + dict['L'] * 90 + dict['M'] * 15 + dict['N'] * 40 + dict['O'] * 10 + dict['P'] * 50 + dict['Q'] * 30 + dict['R'] * 50 + dict['S'] * 30 + dict['T'] * 20 + dict['U'] * 40 + dict['V'] * 50 + dict['W'] * 20 + dict['X'] * 17 + dict['Y'] * 20 + dict['Z'] * 21
         price += dict['B']//2 * 45 + dict['B'] % 2 * 30
         # A: offers for buying 5 and 3, 5 takes priority
         price += dict['A']//5 * 200 + dict['A'] % 5 //3 * 130 + (dict['A'] % 5) % 3 * 50
 
         return price
+
 
 
