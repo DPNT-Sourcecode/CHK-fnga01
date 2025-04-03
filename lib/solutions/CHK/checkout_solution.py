@@ -46,12 +46,15 @@ class CheckoutSolution:
         
     
         price = 0
-        price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40 + dict['F'] * 10 + dict['G'] * 20 + dict['I'] * 35 + dict['J'] * 60 + dict['K'] * 70 + dict['L'] * 90 + dict['M'] * 15 + dict['N'] * 40 + dict['O'] * 10 + dict['P'] * 50 + dict['Q'] * 30 + dict['R'] * 50 + dict['S'] * 30 + dict['T'] * 20 + dict['U'] * 40 + dict['V'] * 50 + dict['W'] * 20 + dict['X'] * 17 + dict['Y'] * 20 + dict['Z'] * 21
+        price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40 + dict['F'] * 10 + dict['G'] * 20 + dict['I'] * 35 + dict['J'] * 60 +  dict['L'] * 90 + dict['M'] * 15 + dict['N'] * 40 + dict['O'] * 10 + dict['R'] * 50 + dict['S'] * 30 + dict['T'] * 20 + dict['U'] * 40 + dict['W'] * 20 + dict['X'] * 90 + dict['Y'] * 10 + dict['Z'] * 50
+        
+        
+        
+        
         price += dict['B']//2 * 45 + dict['B'] % 2 * 30
         # A: offers for buying 5 and 3, 5 takes priority
         price += dict['A']//5 * 200 + dict['A'] % 5 //3 * 130 + (dict['A'] % 5) % 3 * 50
+        price += dict['H']//10 * 80 + dict['H'] % 10 //5 * 45 + (dict['H'] % 10) % 5 * 10
+        price += dict['K']//2 * 
 
         return price
-
-
-
