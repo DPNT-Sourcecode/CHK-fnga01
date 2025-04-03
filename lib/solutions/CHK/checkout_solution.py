@@ -62,7 +62,24 @@ class CheckoutSolution:
             price += groupoffer//3 * 45
             # for every group offer completed, remove 3 items
             for i in range(groupoffer//3):
-                dict['Z'] = max(dict['Z'] - 3, 0)
+                removed = 0
+                while dict['Z'] > 0 and removed<3:
+                    dict['Z'] -= 1
+                    removed += 1
+                while dict['S'] > 0 and removed<3:
+                    dict['S'] -= 1
+                    removed += 1
+                while dict['T'] > 0 and removed<3:
+                    dict['T'] -= 1
+                    removed += 1                    
+                while dict['Y'] > 0 and removed<3:
+                    dict['Y'] -= 1
+                    removed += 1                        
+                while dict['X'] > 0 and removed<3:
+                    dict['X'] -= 1
+                    removed += 1
+                
+                
                 
                 
     
@@ -80,6 +97,7 @@ class CheckoutSolution:
         price += dict['V']//3 * 130 + dict['V'] % 3 //2 * 90 + (dict['V'] % 3) % 2 * 50
 
         return price
+
 
 
 
