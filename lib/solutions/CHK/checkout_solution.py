@@ -91,12 +91,13 @@ class CheckoutSolution:
         price += dict['A']//5 * 200 + dict['A'] % 5 //3 * 130 + (dict['A'] % 5) % 3 * 50        
         price += dict['B']//2 * 45 + dict['B'] % 2 * 30
         price += dict['H']//10 * 80 + dict['H'] % 10 //5 * 45 + (dict['H'] % 10) % 5 * 10
-        price += dict['K']//2 * 150 + dict['K'] % 2 * 80
+        price += dict['K']//2 * 120+ dict['K'] % 2 * 70
         price += dict['P']//5 * 200 + dict['P'] % 5 * 50
         price += dict['Q']//3 * 80 + dict['Q'] % 3 * 30
         price += dict['V']//3 * 130 + dict['V'] % 3 //2 * 90 + (dict['V'] % 3) % 2 * 50
 
         return price
+
 
 
 
