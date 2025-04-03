@@ -45,10 +45,10 @@ class CheckoutSolution:
             dict['F'] -= dict['F']//3
         # 3N get one M for free
         if dict['M'] > 0:
-            dict['M'] = max(dict['M'] -= dict['N']//3, 0)
+            dict['M'] = max(dict['M'] - dict['N']//3, 0)
         # 3R get one Q for free
         if dict['Q'] > 0:
-            dict['Q'] = max(dict['Q'] -= dict['R']//3, 0)
+            dict['Q'] = max(dict['Q'] - dict['R']//3, 0)
         # 3U get one U for free
         if dict['U'] >= 4:
             dict['U'] -= dict['U']//4
@@ -69,3 +69,4 @@ class CheckoutSolution:
         price += dict['V']//3 * 130 + dict['V'] % 3 //2 * 90 + (dict['V'] % 3) % 2 * 50
 
         return price
+
