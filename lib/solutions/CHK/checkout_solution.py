@@ -17,7 +17,8 @@ class CheckoutSolution:
             else:
                 return -1
         # buy 2 E get a B for free            
-        dict['B'] -= dict['E']//2        
+        if dict['B'] > 0:
+            dict['B'] -= dict['E']//2        
     
         price = 0
         price += dict['C'] * 20 + dict['D'] * 15 + dict['E'] * 40
@@ -25,6 +26,5 @@ class CheckoutSolution:
         # A: offers for buying 5 and 3, 5 takes priority
         price += dict['A']//5 * 200 + dict['A'] % 5 //3 * 130 + (dict['A'] % 5) % 3 * 50
 
-        
         return price
 
