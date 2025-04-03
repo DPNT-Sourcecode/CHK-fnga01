@@ -39,13 +39,19 @@ class CheckoutSolution:
                 return -1
         # buy 2 E get a B for free            
         if dict['B'] > 0:
-            dict['B'] -= dict['E']//2        
+            dict['B'] = max(dict['B'] - dict['E']//2, 0)        
         #buy 2 F, get an F for free (need at least 3 in basket)
         if dict['F'] >= 3:
             dict['F'] -= dict['F']//3
         # 3N get one M for free
         if dict['M'] > 0:
-            dict['M'] -= dict['N']//3
+            dict['M'] = max(dict['M'] -= dict['N']//3, 0)
+        # 3R get one Q for free
+        if dict['Q'] > 0:
+            dict['Q'] = max(dict['Q'] -= dict['R']//3, 0)
+        # 3U get one U for free
+        if dict['U'] >= 4:
+            dict['U'] -= dict['U']//4
         
     
         price = 0
